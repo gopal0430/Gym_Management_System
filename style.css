@@ -17,11 +17,11 @@ body {
     border-radius: 5px;
 }
 .submit-btn {
-    background-color: #28a745;
+    background-color: #0ceb40;
     color: white;
-    border-radius: 5px;
+    border-radius: 40px;
     padding: 10px;
 }
 .submit-btn:hover {
-    background-color: #218838;
+    background-color: #1ca23b;
 }
