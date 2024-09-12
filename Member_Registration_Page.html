@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Member Registration</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel=“stylesheet” type=“text/css” href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <form action="/submit_registration" method="POST" class="registration-form">
+                    <h2 class="form-heading">Gym Member Registration</h2>
+
+                    <!-- Personal Details -->
+                    <div class="mb-3">
+                        <label for="full_name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="full_name" name="full_name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="dob" class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" id="dob" name="dob" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="gender" class="form-label">Gender</label>
+                        <select class="form-control" id="gender" name="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="height" class="form-label">Height (in cm)</label>
+                        <input type="number" class="form-control" id="height" name="height" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="weight" class="form-label">Weight (in kg)</label>
+                        <input type="number" class="form-control" id="weight" name="weight" required>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+                    </div>
+
+                    <!-- Membership Details -->
+                    <div class="mb-3">
+                        <label for="doj" class="form-label">Date of Joining (DOJ)</label>
+                        <input type="date" class="form-control" id="doj" name="doj" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="membership_plan" class="form-label">Membership Plan</label>
+                        <select class="form-control" id="membership_plan" name="membership_plan" required>
+                            <option value="">Select Plan</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="quarterly">Quarterly</option>
+                            <option value="yearly">Yearly</option>
+                        </select>
+                    </div>
+
+                    <!-- Additional Fields -->
+
+                    <!-- Fitness Goal -->
+                    <div class="mb-3">
+                        <label for="fitness_goal" class="form-label">Fitness Goal</label>
+                        <select class="form-control" id="fitness_goal" name="fitness_goal" required>
+                            <option value="">Select Goal</option>
+                            <option value="weight_loss">Weight Loss</option>
+                            <option value="weight_gain">Weight Gain</option>
+                            <option value="muscle_building">Muscle Building</option>
+                            <option value="cardio_improvement">Cardio Improvement</option>
+                            <option value="general_fitness">General Fitness</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Current Fitness Level -->
+                    <div class="mb-3">
+                        <label for="fitness_level" class="form-label">Current Fitness Level</label>
+                        <select class="form-control" id="fitness_level" name="fitness_level" required>
+                            <option value="">Select Fitness Level</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+
+                    <!-- Workout Preferences -->
+                    <div class="mb-3">
+                        <label for="workout_preferences" class="form-label">Workout Preferences</label>
+                        <select class="form-control" id="workout_preferences" name="workout_preferences" multiple required>
+                            <option value="cardio">Cardio</option>
+                            <option value="strength_training">Strength Training</option>
+                            <option value="hiit">HIIT</option>
+                            <option value="yoga">Yoga</option>
+                            <option value="pilates">Pilates</option>
+                            <option value="functional_training">Functional Training</option>
+                        </select>
+                    </div>
+
+                    <!-- Dietary Preferences -->
+                    <div class="mb-3">
+                        <label for="dietary_preferences" class="form-label">Dietary Preferences</label>
+                        <select class="form-control" id="dietary_preferences" name="dietary_preferences" required>
+                            <option value="">Select Dietary Preference</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="non_vegetarian">Non-Vegetarian</option>
+                            <option value="gluten_free">Gluten-Free</option>
+                            <option value="keto">Keto</option>
+                            <option value="paleo">Paleo</option>
+                        </select>
+                    </div>
+
+                    <!-- Injuries or Physical Limitations -->
+                    <div class="mb-3">
+                        <label for="injuries" class="form-label">Injuries or Physical Limitations</label>
+                        <textarea class="form-control" id="injuries" name="injuries" rows="3"></textarea>
+                    </div>
+
+                    <!-- Referral Source -->
+                    <div class="mb-3">
+                        <label for="referral_source" class="form-label">Referral Source</label>
+                        <select class="form-control" id="referral_source" name="referral_source" required>
+                            <option value="">Select Referral Source</option>
+                            <option value="social_media">Social Media</option>
+                            <option value="website">Website</option>
+                            <option value="friend_family">Friend/Family</option>
+                            <option value="ad_promotion">Ad/Promotion</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Preferred Contact Method -->
+                    <div class="mb-3">
+                        <label for="contact_method" class="form-label">Preferred Contact Method</label>
+                        <select class="form-control" id="contact_method" name="contact_method" required>
+                            <option value="">Select Contact Method</option>
+                            <option value="email">Email</option>
+                            <option value="phone">Phone</option>
+                            <option value="sms">SMS</option>
+                            <option value="app_notifications">App Notifications</option>
+                        </select>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn submit-btn">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+  <!-- Bootstrap 5 JS (Optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
